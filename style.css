@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #793939;
+}
+
+.container {
+    position: relative;
+    min-height: 100vh;
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background-color: #793939;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.container .search-box {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.search-box input {
+    flex: 1;
+    height: 100%;
+    outline: none;
+    border: none;
+    background-color: #393e46;
+    padding: 12px;
+    color: #fff;
+    border-radius: 6px 0 0 6px;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.search-box input::placeholder {
+    color: #999;
+}
+
+.search-box i {
+    color: #fff;
+    padding: 12px;
+    border-radius: 0 6px 6px 0;
+    background-color: #2b3037;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.search-box i:hover,
+.search-box i.active {
+    background-color: #fff;
+    color: #e86a2b;
+}
+
+.responsive {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.responsive .gallery {
+    position: relative;
+    height: 300px;
+    width: 210px;
+    border-radius: 6px;
+    overflow: hidden;
+    margin: 8px;
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.responsive .gallery:hover {
+    transform: scale(1.05);
+}
+
+.responsive .gallery img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.responsive .gallery h2 {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #e86a2b;
+    font-size: 18px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media only screen and (max-width: 600px) {
+    .responsive .gallery {
+        width: 100%;
+    }
+}
